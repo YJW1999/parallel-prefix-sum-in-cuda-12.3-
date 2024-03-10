@@ -93,5 +93,12 @@ int main() {
 		std::cout << data[i] << ": " << output[i] << std::endl;
 	}
 
+	cudaFree(input_data);
+	cudaFree(output_data);
+	cudaFree(sum);
+	cudaFree(counter);
+	delete[] data;
+	delete[] output;
+
 	return 0;
 }
